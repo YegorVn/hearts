@@ -1,0 +1,79 @@
+html, body{
+	height: 100vh;
+	overflow-y: hidden; 
+	font-family: sans-serif;
+}
+
+@keyframes heart-block__el_animation{
+	from{
+		width: 0px;
+		height: 0px;
+	}
+	50%{
+		width: 100%;
+		height: 100%;
+	}
+	to{
+		width: 0px;
+		height: 0px;
+	}
+}
+
+.heart-block{
+	display: flex;
+	justify-content: space-around;
+	width: 100%;
+	height: 100%;
+	flex-wrap: wrap;
+}
+
+.heart-block__wrapper{
+	width: 175px;
+	height: 175px;
+	display: flex;
+
+}
+
+.heart-block__el{
+	width: 0px;
+	height: 0px;
+	cursor: pointer;
+}
+
+.heart-block__el_animation{
+	animation-name: heart-block__el_animation;
+	animation-fill-mode: forwards;
+	animation-iteration-count: 1;
+	animation-timing-function: linear;
+}
+
+@keyframes heart-block__el_explode-animation{
+	from{
+		width: 120px;
+		height: 120px;
+		content: url('./explode.gif');
+	}
+	50%{
+	}
+	99%{
+		content: url('./img/love.png');
+		width: 120px;
+		height: 120px;
+	}
+	to{
+		width: 0;
+		height: 0;
+	}
+}
+
+.heart-block__el_explode-animation{
+	animation-name: heart-block__el_explode-animation;
+	animation-duration: 2s !important;
+	animation-delay: 0s !important;
+}
+
+.counter{
+	width: fit-content;
+	height: fit-content;
+	font-size: 3rem;
+}
